@@ -66,11 +66,39 @@ form input:focus {
   outline: none;
 }
 
+.list-group {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 992px) {
+  .list-group {
+    flex-direction: column;
+  }
+}
+
+.list-group .uncompleted {
+  background-color: green;
+}
+
+.list-group .completed {
+  background-color: blue;
+}
+
+.list-group header {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
 .list-items {
   display: flex;
   width: 100%;
   flex-direction: column;
-  max-width: 400px;
+  padding: 15px;
 }
 
 .list-item {
